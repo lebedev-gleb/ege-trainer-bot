@@ -7,7 +7,7 @@ Telegram bot for preparing for task 19 of the EGE profile-level math exam (numbe
 - Theory on 15 topics: divisibility, remainders, GCD and LCM, Diophantine equations, invariants, game theory, graphs, the pigeonhole principle and more
 - Practice mode with automatic answer checking and explanations for mistakes
 - User profile with statistics and a top-10 leaderboard
-- Useful files (theory and cheat sheets) and curated channels
+- Links to official practice materials (FIPI open task bank, Reshu EGE) and curated channels
 - Suggestions from users are saved to the database
 
 ## Tech stack
