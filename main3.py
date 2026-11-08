@@ -278,15 +278,11 @@ def Offers(call):
 def Files(call):
     bot.delete_message(call.message.chat.id, call.message.message_id)
     markup = types.InlineKeyboardMarkup()
-    back_btn = types.InlineKeyboardButton('Назад', callback_data='back')
-    markup.add(back_btn)
-    # Открываем файл в бинарном режиме ('rb') и отправляем
-    with open('_19_Теория_чисел__Шпаргалка__518sk.pdf', 'rb') as file:
-        bot.send_document(call.message.chat.id, file)
-    with open('_19_Вся_теория__4krsn.pdf', 'rb') as file:
-        bot.send_document(call.message.chat.id, file)
+    markup.add(types.InlineKeyboardButton('Открытый банк заданий ФИПИ', url='https://fipi.ru/ege/otkrytyy-bank-zadaniy-ege'))
+    markup.add(types.InlineKeyboardButton('Задания и теория на «Решу ЕГЭ»', url='https://math-ege.sdamgia.ru/'))
+    markup.add(types.InlineKeyboardButton('Назад', callback_data='back'))
     bot.send_message(call.message.chat.id,
-                     "📂 Раздел «Полезные файлы» \nЗдесь ты найдёшь различные материалы для подготовки к ЕГЭ — шпаргалки, конспекты, тесты и задания в удобном формате. \nСкачивай и используй их, чтобы учиться эффективно и экономить время!",
+                     "📂 Раздел «Полезные материалы»\nОфициальные задания и разборы для подготовки к заданию 19 ЕГЭ.",
                      reply_markup=markup)
 
 
