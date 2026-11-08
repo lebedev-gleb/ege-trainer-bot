@@ -1,3 +1,4 @@
+import os
 import telebot
 from telebot import types
 from database import Session
@@ -20,7 +21,7 @@ Session = sessionmaker(bind=engine)
 
 Base.metadata.create_all(engine)
 
-bot = telebot.TeleBot('7332111753:AAG05D9vjSpn_ca2xrwxzTDFFNrRKOWKD1A')
+bot = telebot.TeleBot(os.environ["BOT_TOKEN"])
 
 
 # Обработка команды /start
@@ -202,7 +203,7 @@ def start_practice(obj):
 
 
 def get_weather(city):
-    api_key = "f430450853714c279f8221723251705"
+    api_key = os.environ.get("WEATHER_API_KEY")
     url = f"http://api.weatherapi.com/v1/current.json?key={api_key}&q={city}&lang=ru"
 
     response = requests.get(url)
